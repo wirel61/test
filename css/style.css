@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Unica+One");
+.back {
+  background: #150d2d;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.text {
+  font-family: 'Unica One', sans-serif;
+  color: #00bcd4;
+  font-size: 30px;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  margin: 175px 0 0;
+  cursor: pointer;
+}
+
+.header {
+  font-family: 'Unica One', sans-serif;
+  color: #00bcd4;
+  font-size: 50px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0 0;  
+}
+
+.corners {
+  -webkit-animation: test 5s ease infinte;
+          animation: test 5s ease infinte;
+}
+
+.spinner {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  box-sizing: border-box;
+  margin: -150px;
+  cursor: pointer;
+}
+.spinner.clicked {
+  -webkit-animation: rotate 6s cubic-bezier(0.1, -0.29, 0, 1) 1;
+          animation: rotate 6s cubic-bezier(0.1, -0.29, 0, 1) 1;
+}
+.spinner.clicked div:nth-child(n+2):after {
+  -webkit-animation: blur 6s cubic-bezier(0.1, -0.29, 0, 1) 1;
+          animation: blur 6s cubic-bezier(0.1, -0.29, 0, 1) 1;
+}
+.spinner.clicked div:nth-child(n+2):before {
+  -webkit-animation: blur_corners 6s cubic-bezier(0.1, -0.29, 0, 1) 1;
+          animation: blur_corners 6s cubic-bezier(0.1, -0.29, 0, 1) 1;
+}
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotateZ(3600deg);
+            transform: rotateZ(3600deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotateZ(3600deg);
+            transform: rotateZ(3600deg);
+  }
+}
+@-webkit-keyframes blur {
+  4% {
+    -webkit-filter: none;
+            filter: none;
+  }
+  5% {
+    -webkit-filter: url("#main");
+            filter: url("#main");
+  }
+  35% {
+    -webkit-filter: url("#main");
+            filter: url("#main");
+  }
+  36% {
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+@keyframes blur {
+  4% {
+    -webkit-filter: none;
+            filter: none;
+  }
+  5% {
+    -webkit-filter: url("#main");
+            filter: url("#main");
+  }
+  35% {
+    -webkit-filter: url("#main");
+            filter: url("#main");
+  }
+  36% {
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+@-webkit-keyframes blur_corners {
+  4% {
+    -webkit-filter: none;
+            filter: none;
+  }
+  5% {
+    -webkit-filter: url("#corners");
+            filter: url("#corners");
+  }
+  35% {
+    -webkit-filter: url("#corners");
+            filter: url("#corners");
+  }
+  36% {
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+@keyframes blur_corners {
+  4% {
+    -webkit-filter: none;
+            filter: none;
+  }
+  5% {
+    -webkit-filter: url("#corners");
+            filter: url("#corners");
+  }
+  35% {
+    -webkit-filter: url("#corners");
+            filter: url("#corners");
+  }
+  36% {
+    -webkit-filter: none;
+            filter: none;
+  }
+}
